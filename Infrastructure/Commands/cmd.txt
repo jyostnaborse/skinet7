@@ -1,0 +1,11 @@
+Drop Database
+dotnet ef database drop -p infrastructure -s API  
+
+remove migrations
+dotnet ef migrations remove -p Infrastructure -s API
+
+add migration 
+dotnet ef migrations add Initialcreate -p Infrastructure -s API -o Data/Migrations
+
+Dotnet watch
+dotnet watch --no-hot-reload
