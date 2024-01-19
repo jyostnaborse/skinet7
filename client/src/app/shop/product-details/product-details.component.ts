@@ -21,7 +21,7 @@ export class ProductDetailsComponent implements OnInit {
   }
 
   getProduct() {
-    const id = this.activatedRoute.snapshot.paramMap.get('id');
+    const id = this.activatedRoute.snapshot.paramMap.get('id'); // to get id from URL link in order to pass to to getProduct methid
 
     
     if (id) {

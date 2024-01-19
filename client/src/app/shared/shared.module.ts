@@ -13,7 +13,7 @@ import { PagerComponent } from './pager/pager.component';
   ],
   imports: [
     CommonModule,
-    PaginationModule.forRoot()
+    PaginationModule.forRoot() //by adding fooRoot ensures that the pagination module is loaded as singloton and same instamce is used across the application
   ],
   exports:[
     PaginationModule,

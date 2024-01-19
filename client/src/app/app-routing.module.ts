@@ -4,12 +4,14 @@ import { HomeComponent } from './home/home.component';
 import { TestErrorsComponent } from './core/test-errors/test-errors.component';
 import { NotFoundComponent } from './core/not-found/not-found.component';
 import { ServerErrorComponent } from './core/server-error/server-error.component';
+import { RxjsLearningcComponent } from './rxjs-learningc/rxjs-learningc.component';
 
 const routes: Routes = [
   {path: '', component:HomeComponent, data:{breadcrumb:'home'}},
   {path: 'test-errors', component:TestErrorsComponent},
   {path: 'not-found', component:NotFoundComponent},
   {path: 'server-error', component:ServerErrorComponent},
+  {path: 'rxjs', component: RxjsLearningcComponent},
   {path: 'shop', loadChildren: () => import('./shop/shop.module').then(m => m.ShopModule)},
   {path: '**', redirectTo : '', pathMatch: 'full'}
 ];

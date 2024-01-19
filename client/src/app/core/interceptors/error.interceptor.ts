@@ -24,8 +24,7 @@ export class ErrorInterceptor implements HttpInterceptor {
           console.log(error.status);
           if (error.status === 400) {
             if (error.error.errors) {
-              console.log('in');
-              throw error.error;
+              throw error.error; // this is to send Validstion error back to component in order to show it on form
             }
             else {
               this.toastr.error(error.error.message, error.status.toString())

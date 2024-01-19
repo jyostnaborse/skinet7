@@ -15,11 +15,11 @@
             <h5 class="text-warning ms-3">Brands</h5>
             <ul class="list-group my-3">
                 <li class="list-group-item" *ngFor="let brand of brands"
-                    [class.active]="brand.id === shopParams.brandId" [value]="brand.id"
+                    [class.active]="brand.id === shopParams.brandId" [value]="brand.id" 
                     (click)="onBrandSelected(brand.id)">
                     {{brand.name}}
                 </li>
-            </ul>
+            </ul>//[class.active] will set the class active brand id is equal to shopparam.brandId
             <h5 class="text-warning ms-3">Types</h5>
             <ul class="list-group my-3">
                 <li class="list-group-item" *ngFor="let type of types" [class.active]="type.id === shopParams.typeId"
@@ -36,7 +36,8 @@
                 </app-paging-header>
 
                 <div class="d-flex mt-2">
-                    <input type="text" (keyup.enter)="onSearch()" placeholder="Search" class="form-control me-2" #search>
+                    <input type="text" (keyup.enter)="onSearch()" placeholder="Search" 
+                    class="form-control me-2" #search> //#search is template ref variable. with this we can refer this element in .ts file 
                     <button class="btn btn-outline-primary mx-2" (click)="onSearch()">Seach</button>
                     <button class="btn btn-outline-success" (click)="onReset()">Reset</button>
 
